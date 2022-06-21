@@ -9,10 +9,23 @@
         $password = $_POST['password'];
         $gender = $_POST['gender'];
 
+        echo "<pre>";
+        var_dump($_POST);
+        echo "</pre><br>";
+
         $sql = "INSERT INTO 'users'('firstname','lastname','email','password','gender') 
                 VALUES ('$firstName','$lastName','$email','$password','$gender')";
+        
+        echo "<pre>";
+        var_dump($sql);
+        echo "</pre><br>";
 
-        $result = $connection->query($sql);
+        $result = $conn->query($sql);
+
+        echo "<pre>";
+        var_dump($conn);
+        echo "</pre>";
+        die;
 
         if($result == TRUE)
         {
@@ -20,9 +33,9 @@
         }
         else
         {
-            echo "Error:" . $sql . "<br>" . $connection->error;
+            echo "Error:" . $sql . "<br>" . $conn->error;
         }
-        $connection->close();
+        $conn->close();
     }
 ?>
 

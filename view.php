@@ -2,12 +2,11 @@
 include "config.php";
 
 $sql = "SELECT * FROM users";
-$result = $connection->query($sql);
+$result = $conn->query($sql);
 ?>
 
-
-
 <!DOCTYPE html>
+
 <html>
 
     <head>
