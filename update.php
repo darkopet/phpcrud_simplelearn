@@ -14,7 +14,7 @@ include "config.php";
         $sql = "UPDATE `users` SET `firstname`='$firstname',`lastname`='$lastname',`email`='$email',`password`='$password',`gender`='$gender' 
                 WHERE `id`='$user_id'"; 
 
-        $result = $conn->query($sql); 
+        $result = $connection->query($sql); 
 
         if ($result == TRUE) 
         {
@@ -22,7 +22,7 @@ include "config.php";
         }
         else
         {
-            echo "Error:" . $sql . "<br>" . $conn->error;
+            echo "Error:" . $sql . "<br>" . $connection->error;
         }
     } 
 
