@@ -5,7 +5,10 @@
     $password = "phpmyadmindb00+--+";
     $dbname= "phpcrud_simplelearn";
 
-    $conn = new mysqli($servername, $username, $password, $dbname);
+    $conn = new mysqli($servername,$username,$password,$dbname);
+    echo "<pre>";
+    var_dump($conn);
+    echo "</pre>";
 
     if ($conn->connect_error)
     {
