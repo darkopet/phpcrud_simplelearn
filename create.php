@@ -7,21 +7,24 @@
         // var_dump($_POST);
         // echo "</pre>";
    
-        $firstName = $_POST['firstname'];
-        $lastName = $_POST['lastname'];
+        $firstname = $_POST['firstname'];
+        $lastname = $_POST['lastname'];
         $email = $_POST['email'];
         $password = $_POST['password'];
-        $gender = $_POST['gender'];
 
         // echo "<pre>";
         // var_dump($_POST);
         // echo "</pre><br>";
 
-        $sql = "INSERT INTO users (firstname, lastname, email, password, gender) 
-                VALUES ($firstName,$lastName,$email,$password,$gender)";
+        $sql = "INSERT INTO users (firstname, lastname, email, password) 
+                VALUES ($firstname,$lastname,$email,$password)";
         
         echo "<pre>";
         var_dump($sql);
+        echo "</pre><br>";
+
+        echo "<pre>";
+        var_dump($_SERVER);
         echo "</pre><br>";
 
         $result = $conn->query($sql);
@@ -60,10 +63,10 @@
                     <input type="email" name="email"><br>
                     Password: <br>
                     <input type="password" name="password"><br><br>
-                    Gender: <br>
+                    <!-- Gender: <br>
                     <input type="radio" name="gender" value="Male">Male
                     <input type="radio" name="gender" value="Female">Female
-                    <br><br>
+                    <br><br> -->
                     <input type="submit" name="submit" value="submit">
                 </fieldset>
 
