@@ -20,11 +20,16 @@
         $sql = "INSERT INTO users (firstname, lastname, email, password, gender) 
                 VALUES ($firstName,$lastName,$email,$password,$gender)";
         
-        // echo "<pre>";
-        // var_dump($sql);
-        // echo "</pre><br>";
+        echo "<pre>";
+        var_dump($sql);
+        echo "</pre><br>";
 
         $result = $conn->query($sql);
+
+        echo "<pre>";
+        var_dump($result);
+        echo "</pre><br>";
+
         if($result == TRUE)
         {
             echo "New database recording is successfull.";
